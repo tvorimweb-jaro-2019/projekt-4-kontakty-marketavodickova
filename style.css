@@ -7,12 +7,23 @@ body {
 	font-size: 14px;
 }
 
-/* ---------------------------------------------------- */
+/* OPRAVENÁ VERZE
+Ahoj,
+u 4. projektu se mi vůbec nepodařila udělat verze pro tablet (umístit fotku vlevo), po dnešní pondělní
+hodině a menší radě od Petra Sedláčka se mi to jakž takž podařilo, ale stejně tam mám něco špatně, protože
+mi nějak hapruje vzhled u přechodu z mobilní verze do tabletu. Nevíte čím by to mohlo být?
+Díky za zpětnou vazbu :)   */
 h1 {
 	text-align: center;
 }
 
-img {
+.fotka {
+	width: 100%;
+	display:flex;
+	
+	justify-content: center;
+}
+img{
 	border-radius: 50%;
 }
 
@@ -37,19 +48,28 @@ img {
 	.ramecek {
 		display: flex;
 		flex-basis: calc(50% - 10px);
-		align-items: flex-start;
-		flex-wrap:wrap;
+		flex-direction:row;
+		padding:10px;
+	}
+.fotka{
+	display:flex;
+	flex-direction: row;
 	}
 
-	img {
-		width: 60%;
-		margin-right: 20px;
+	img{
+		flex-basis:20px;
 	}
+.text{
+	display:flex;
+	flex-direction:column;
+	
 
-	.popis {
-		text-align: left;
-	}
+}
 
+h2{text-align:left;
+	margin:10px 15px;}
+p{text-align:left;
+	margin:10px 15px;}
 	
 }
 
@@ -60,9 +80,10 @@ img {
 		align-items: center;
 		
 	}
-	.popis {
+	h2 {
 		text-align: center;
 	}
+	p{text-align: center;}
 
 	img {
 		width: 120px;
